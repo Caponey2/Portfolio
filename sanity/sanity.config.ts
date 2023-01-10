@@ -1,4 +1,4 @@
-//@ts-ignore
+//@ts-nocheck
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
