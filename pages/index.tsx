@@ -12,7 +12,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 // import dynamic from 'next/dynamic';
 // import photo from '../public/me.jpg';
-import { GetStaticProps, NextPage } from 'next';
+// import { GetStaticProps, NextPage } from 'next';
+import { GetServerSideProps, NextPage } from 'next';
 import { PageInfo, Experience, Skill, Project, Social } from '../typings';
 import { fetchPageInfo } from '../utils/fetchPageInfo';
 import { fetchExperiences } from '../utils/fetchExperiences';
@@ -83,7 +84,25 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 };
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
+// export const getStaticProps: GetStaticProps<Props> = async () => {
+// 	const pageInfo: PageInfo = await fetchPageInfo();
+// 	const experiences: Experience[] = await fetchExperiences();
+// 	const skills: Skill[] = await fetchSkills();
+// 	const projects: Project[] = await fetchProjects();
+// 	const socials: Social[] = await fetchSocials();
+
+// 	return {
+// 		props: {
+// 			pageInfo,
+// 			skills,
+// 			projects,
+// 			experiences,
+// 			socials,
+// 		},
+// 		revalidate: 30,
+// 	};
+// };
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
 	const pageInfo: PageInfo = await fetchPageInfo();
 	const experiences: Experience[] = await fetchExperiences();
 	const skills: Skill[] = await fetchSkills();

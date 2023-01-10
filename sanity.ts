@@ -5,7 +5,7 @@ export const config = {
 	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
 	projectId: '8swovckc',
 	apiVersion: '2023-01-01',
-	useCdn: process.env.NODE_ENV === 'production',
+	useCdn: true,
 };
 
 export const sanityClient = createClient(config);
