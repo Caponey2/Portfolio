@@ -31,15 +31,19 @@ function Projects({ projects }: Props) {
 			</h3>
 			<div
 				id='ProjectContainer'
-				className='h-4/6 w-full relative flex py-5 space-x-9   items-center justify-center '>
+				className='h-4/6 w-full  flex py-5 space-x-9   items-center justify-center '>
 				<ProjectCard
 					project={projects[currentIndex]}
 					count={currentIndex}
 					length={projects.length}
+					key={projects[currentIndex]._id}
 				/>
 			</div>
 
-			<div className='w-full absolute top-[30%] bg-[#3b82f6]/10 left-0 h-[500px] -skew-y-12 ' />
+			<div
+				id='The Stripe'
+				className='w-full absolute top-[30%] bg-[#3b82f6]/10 left-0 h-[500px] -skew-y-12 '
+			/>
 			<div
 				id='ArrowBox'
 				className='absolute bottom-5 h-[40px] w-2/3 justify-between'>

@@ -43,6 +43,10 @@ function WorkExperience({ experiences }: Props) {
 				/>
 			</div>
 			<div
+				id='The Stripe'
+				className='w-full absolute top-[30%] bg-[#3b82f6]/10 right-0 h-[500px] skew-y-12 '
+			/>
+			<div
 				id='ArrowBox'
 				className='absolute bottom-5 h-[40px] w-2/3 justify-between'>
 				<div id='ArrowFlexBox' className='flex w-full justify-between'>
