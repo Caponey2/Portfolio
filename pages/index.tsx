@@ -5,6 +5,7 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import WorkExperience from '../components/WorkExperience';
+import WorkExperience2 from '../components/WorkExperience2';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
@@ -53,6 +54,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 			<section id='experience' className='snap-center'>
 				<WorkExperience experiences={experiences} />
 			</section>
+
 			{/* Skills */}
 			<section id='skills' className='snap-start'>
 				<Skills skills={skills} />
@@ -67,8 +69,8 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 				<Contact />
 			</section>
 			<Link href='#hero'>
-				<footer className='sticky bottom-5 w-full cursor-pointer'>
-					<div className='flex items-center justify-center'>
+				<footer className='sticky flex bottom-5 left-1/2 -translate-x-1/2 w-[40px] self-center cursor-pointer'>
+					<div className='self-center flex items-center justify-center'>
 						<Image
 							className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
 							src={urlFor(pageInfo.heroImage).url()}
@@ -94,9 +96,9 @@ export default Home;
 // 	return {
 // 		props: {
 // 			pageInfo,
+// 			experiences,
 // 			skills,
 // 			projects,
-// 			experiences,
 // 			socials,
 // 		},
 // 		revalidate: 30,

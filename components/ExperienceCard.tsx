@@ -10,7 +10,7 @@ function ExperienceCard({ experience }: Props) {
 	return (
 		<div
 			id='Experience Card Container'
-			className='flex w-full flex-shrink-0 rounded-lg snap-center justify-center bg-[#292929] 2xl:bg-[#292929] lg:w-4/5 xl:w-3/5 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-y-hidden overflow-y-scroll'>
+			className='flex w-full flex-shrink-0 rounded-lg snap-center justify-center bg-[#292929] 2xl:bg-[#292929] lg:w-4/5 xl:w-3/5 opacity-100 cursor-pointer transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#3b82f6]/80'>
 			<motion.div
 				initial={{
 					y: -100,
@@ -34,10 +34,11 @@ function ExperienceCard({ experience }: Props) {
 					className='flex justify-center items-center w-[75px] h-[75px] md:w-[150px] md:h-[150px] rounded-full '
 					id='Image'
 				/>
+				<div></div>
 
-				<h4 className='flex font-light tracking-wide text-blue-400 text-md md:text-2xl'>
+				<h3 className='flex font-light tracking-wide text-blue-400 text-md md:text-2xl'>
 					{experience.jobTitle}
-				</h4>
+				</h3>
 				<p className='flex font-bold text-center text-md text-blue-400/50 md:text-2xl'>
 					{experience.company}
 				</p>
