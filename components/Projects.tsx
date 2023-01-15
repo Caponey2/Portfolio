@@ -42,11 +42,11 @@ function Projects({ projects }: Props) {
 
 			<div
 				id='The Stripe'
-				className='w-full absolute top-[30%] bg-[#3b82f6]/10 left-0 h-[500px] -skew-y-12 '
+				className='w-full absolute top-[30%] bg-[#3b82f6]/10 left-0 h-[500px] -skew-y-12 pointer-events-none'
 			/>
 			<div
 				id='ArrowBox'
-				className='absolute bottom-5 h-[40px] w-2/3 justify-between'>
+				className='absolute bottom-5 h-[40px] w-2/3 justify-between lg:top-1/2 lg:-translate-y-1/2 z-20 lg:w-full xl:w-5/6'>
 				<div id='ArrowFlexBox' className='flex w-full justify-between'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -54,7 +54,7 @@ function Projects({ projects }: Props) {
 						viewBox='0 0 24 24'
 						strokeWidth={2.5}
 						stroke='#3b82f6'
-						className='w-6 h-[40px]'
+						className='w-6 h-[40px] lg:w-[100px] lg:h-[100px]'
 						onClick={prevSlide}>
 						<path
 							strokeLinecap='round'
@@ -68,7 +68,7 @@ function Projects({ projects }: Props) {
 						viewBox='0 0 24 24'
 						strokeWidth={2.5}
 						stroke='#3b82f6'
-						className='w-6 h-[40px]'
+						className='w-6 h-[40px] lg:w-[100px] lg:h-[100px]'
 						onClick={nextSlide}>
 						<path
 							strokeLinecap='round'

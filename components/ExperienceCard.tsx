@@ -25,7 +25,7 @@ function ExperienceCard({ experience }: Props) {
 					y: 0,
 				}}
 				viewport={{ once: true }}
-				className='flex flex-col mx-1 p-5 items-center rounded-lg w-3/5'>
+				className='flex flex-col mx-1 p-5 items-center rounded-lg w-full md:w-3/5'>
 				<Image
 					src={urlFor(experience?.companyImage).url()}
 					width={400}
@@ -47,36 +47,42 @@ function ExperienceCard({ experience }: Props) {
 						{experience.company}
 					</p>
 				</motion.div>
-				<div className='flex space-x-2 my-2'>
+				<div
+					id='Skills Container'
+					className='flex space-x-2 space-y-2 m-2 flex-row flex-wrap items-center justify-center  z-30'>
 					{experience?.technologies?.map((technology, i) =>
 						i % 2 === 0 ? (
 							<motion.div
+								id={`Skill ${i + 1}`}
 								key={technology._id}
 								initial={{ y: -100, opacity: 0 }}
 								transition={{ duration: 1.2, delay: 3.2 + i * 0.2 }}
-								whileInView={{ opacity: 1, y: 0 }}>
+								whileInView={{ opacity: 1, y: 0 }}
+								className='flex items-center justify-center w-[30px] h-[30px] md:w-[60px] md:h-[60px]'>
 								<Image
 									src={urlFor(technology?.image).url()}
 									alt={technology._id}
 									width={100}
 									height={100}
 									key={technology._id}
-									className='rounded-full w-[30px] h-[30px] md:w-[60px] md:h-[60px]'
+									className='rounded-full w-[30px] h-[30px] md:w-[60px] md:h-[60px] items-center justify-center'
 								/>
 							</motion.div>
 						) : (
 							<motion.div
+								id={`Skill ${i + 1}`}
 								key={technology._id}
 								initial={{ y: 100, opacity: 0 }}
 								transition={{ duration: 1.2, delay: 3.2 + i * 0.2 }}
-								whileInView={{ opacity: 1, y: 0 }}>
+								whileInView={{ opacity: 1, y: 0 }}
+								className='flex items-center justify-center w-[30px] h-[30px] md:w-[60px] md:h-[60px]'>
 								<Image
 									src={urlFor(technology?.image).url()}
 									alt={technology._id}
 									width={100}
 									height={100}
 									key={technology._id}
-									className='rounded-full w-[30px] h-[30px] md:w-[60px] md:h-[60px]'
+									className='rounded-full w-[30px] h-[30px] md:w-[60px] md:h-[60px] items-center justify-center'
 								/>
 							</motion.div>
 						)
