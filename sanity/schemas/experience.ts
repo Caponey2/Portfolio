@@ -12,6 +12,11 @@ export default defineType({
       type: 'string',
     },
     {
+      name: 'order',
+      title: 'Order',
+      type: 'number',
+    },
+    {
       name: 'companyImage',
       title: 'CompanyImage',
       type: 'image',

@@ -21,7 +21,9 @@ function WorkExperience({ experiences }: Props) {
 		const newIndex = isLastSlide ? 0 : currentIndex + 1;
 		setCurrentIndex(newIndex);
 	};
-
+	const sortedExperiences = experiences.sort((e1, e2) =>
+		e1.order < e2.order ? -1 : e1.order > e2.order ? 1 : 0
+	);
 	return (
 		<motion.div
 			initial={{ opacity: 0 }}
@@ -38,8 +40,8 @@ function WorkExperience({ experiences }: Props) {
 				id='Experience Container'
 				className=' h-4/6 w-full relative flex py-5 space-x-9 justify-center  '>
 				<ExperienceCard
-					key={experiences[currentIndex]._id}
-					experience={experiences[currentIndex]}
+					key={sortedExperiences[currentIndex]._id}
+					experience={sortedExperiences[currentIndex]}
 				/>
 			</div>
 			<div

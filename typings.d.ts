@@ -62,6 +62,7 @@ export interface Experience extends SanityBody {
 	jobTitle: string;
 	points: string[];
 	technologies: Technology[];
+	order: Number;
 }
 
 export interface Social extends SanityBody {
